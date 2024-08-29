@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var persion = {
+            cao : null,
+            nặng : null
+        }
+
+        //tạo function calBMI tính tiền boa
+        function calBMI(persion) {
+            return persion.nặng /persion.cao**2;
+
+        }
+        //tạo function in kết quả
+        printKetqua =  (bmit1, bmit2)=>{
+            if (bmit1 == bmit2 ) {
+                console.log(`Mark BMI (${bmit1}) bằng với John (${bmit2})`);
+            } else if(bmit1 > bmit2) {
+                console.log(`Mark BMI (${bmit1}) cao với John (${bmit2})`);
+            } else{
+                console.log(`Mark BMI (${bmit1}) thấp với John (${bmit2})`);
+            }
+        };
+        //data Mark cao hơn
+        var data1_mark = {
+            cao : 78,
+            nặng : 1.69
+        }
+        var data1_john = {
+            cao : 92,
+            nặng : 1.95
+        }
+        console.log('Data 1: ');
+        printKetqua(calBMI(data1_mark),calBMI(data1_john));
+
+
+        //data John cao
+        var data2_mark = {
+            cao : 100,
+            nặng : 1.70
+        }
+        var data2_john = {
+            cao : 80,
+            nặng : 1.90
+        }
+        console.log('Data 2: ');
+        printKetqua(calBMI(data2_mark),calBMI(data2_john));
+
+
+
+        //data bằng nhau
+        var data3_mark = {
+            cao : 75,
+            nặng : 1.79
+        }
+        var data3_john = {
+            cao : 75,
+            nặng : 1.79
+        }
+        console.log('Data 3: ');
+        printKetqua(calBMI(data3_mark),calBMI(data3_john));
+    </script>
+</body>
+</html>
